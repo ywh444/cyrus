@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Cyrus del giorno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Il Cyrus del giorno</h1>
+    <img id="randomImage" src="" alt="Random Image">
+    <br><br>
+    <button onclick="generateRandomImage()">Un altro!</button>
+
+    <script>
+        // List of image filenames (can be paths if hosted elsewhere)
+        const images = [
+            "(1).png",
+            "(2).png",
+            "(3).png",
+            "(4).png",
+            "(5).png",
+            "(6).png",
+            "(7).png",
+            "(8).png",
+            "(9).png",
+            "(10).png",
+            "(11).png",
+            "(12).png",
+            "(13).png",
+            "(14).png",
+            "(15).png",
+            "(16).png",
+            "(17).png",
+            "(18).png",
+            "(19).png",
+            "(20).png"
+        ];
+
+        // Function to display a random image
+        function generateRandomImage() {
+            // Get a random index from the images array
+            const randomIndex = Math.floor(Math.random() * images.length);
+
+            // Set the src attribute of the image element to the selected image
+            document.getElementById("randomImage").src = images[randomIndex];
+        }
+
+        // Display a random image when the page loads
+        window.onload = generateRandomImage;
+    </script>
+
+</body>
+</html>
